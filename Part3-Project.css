@@ -1,0 +1,175 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    }
+    * {margin:0;padding:0;border:0 none;position: relative; outline: none;
+    }
+    
+    body{
+        background: #00c3ff;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    
+    #title{
+        font-family: 'comfortaa', sans-serif;
+        font-style: normal;
+        letter-spacing: 5px;
+        color: rgba(0,0,0,.4);
+        margin: 3rem auto 0;
+    }
+    
+    #rules{
+        font-family: roboto;
+        font-weight: 400;
+        font-size: 20px;
+        font-style: italic;
+    }
+    
+    #info{
+        /* font-family: 'Railway'; */
+        font-weight: 300;
+        font-size: 25px;
+        color: #A770EF;  /* fallback for old browsers */
+        color: -webkit-linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);  /* Chrome 10-25, Safari 5.1-6 */
+        color: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    
+    button{
+        width: 75px;
+        height: 75px;
+        border-width: 0px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        outline: none;
+    }
+    
+    button:focus {
+        border: none;
+        outline: none;
+    }
+    
+    #board{
+        background: #ff00cc;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom right, #333399, #7d0ca0, #333399); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        border-radius: 25px;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.507), 0 4px 20px 0 rgba(0, 0, 0, 0.507);
+    }
+    
+    td{
+        padding: 20px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* Animation Stuff */
+    
+    #title > a {
+        text-decoration: none;
+        color: rgba(0,0,0,.4);
+        z-index: 1;
+    }
+    
+    
+    
+    #title > a:before {
+        content: "";
+        background: #A770EF;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        bottom: 0;
+        left: 0;
+        border-radius: 5px;
+        transform: scaleX(0);
+        animation: 1.4s forwards no-hover-v linear;
+        animation-fill-mode: forwards;
+        z-index: -1;
+    }
+        #title > a:hover:before,
+        #title > a:focus:before {
+        animation: .5s forwards hover-v linear;
+        animation-fill-mode: forwards;
+    }
+    @keyframes hover-v {
+        0% {
+            transform: scaleX(0);
+            height: 5px;
+           }
+        45% {   
+            transform: scaleX(1.05);
+            height: 5px;
+           }
+        55% {height: 5px;}
+        100% {
+            transform: scaleX(1.05);
+            height: 3rem;
+           }
+      }
+      @keyframes no-hover-v {
+        0% {
+            transform: scaleX(1.05);
+            height: 3rem;
+            }
+        45% {height: 5px;}
+        55% {   
+            transform: scaleX(1.05);
+            height: 5px;
+            opacity: 1;
+            }
+    
+        100% {
+            transform: scaleX(0);
+            height: 5px;
+            opacity: .02;
+            }
+    }
+      
+      p {padding: .5rem;}
+      p a {color: rgba(255,255,255,.5)}
+    
+      h2 {
+        font-size: 3rem;
+        font-weight: normal;
+        text-align: center;
+        color: rgba(0,0,0,.4);
+      }
+      h2>p {
+        text-decoration: none;
+        color: rgba(0, 0, 0, .4);
+        z-index: 1;
+      }
+      h2 > p:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        background: #A770EF;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);
+        visibility: hidden;
+        border-radius: 5px;
+        transform: scaleX(0);
+        transition: .25s linear;
+      }
+      h2 > p:hover:before,
+    h2 > p:focus:before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
